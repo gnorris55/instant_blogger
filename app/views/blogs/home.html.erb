@@ -1,0 +1,9 @@
+<h1>this is where the work is done</h1>
+
+<% @blogs.each do |blog| %>
+    <div class="blog-info">
+        <h3>author: <%= blog.author.name %></h3>
+        <p><%= blog.title %></p>
+        <p><%= blog.body %></p>
+    </div>
+<% end %>

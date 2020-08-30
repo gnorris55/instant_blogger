@@ -9,4 +9,5 @@ class UsersController < ApplicationController
       t.json {render :layout => false}
     end
   end
+
 end

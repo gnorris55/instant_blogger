@@ -27,7 +27,7 @@ class BlogsController < ApplicationController
 
   def create
     @blog = Blog.new(blog_params)
-
+    UserMailer.new_order_email(@blog.author).deliver_now
     respond_to do |format|
       if @blog.save
         format.js

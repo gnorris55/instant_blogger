@@ -1,6 +1,6 @@
 User.destroy_all
 
-@grom = User.create(name: "grom", email: "grom@yah00.ca")
+@grom = User.create(name: "grom", email: "gnorris@alumni.shawnigan.ca")
 @dave = User.create(name: "dave", email: "dave@yah00.ca")
 @daveII = User.create(name: "dave II", email: "daveII@yah00.ca")
 @bob = User.create(name: "bob", email: "bob@yah00.ca")

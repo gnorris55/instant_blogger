@@ -1,6 +1,7 @@
 <header><h1 class="web-title">instant blogger</h1></header>
 <div class="options">
         <div class="item"><div id="new-blog"><%= link_to "new blog", new_blog_path, remote: true %></div></div>
+        <div class="item-2"></div>
     </div>
 <div class="main-features">
     <span>
@@ -11,11 +12,13 @@
         <% @users.each do |user|%>
             <article class="item">
                 <div class="contents">
-                    <p class="name">Username: <%= user.name%></p>
-                    <p class="name">id: <%= user.id%></p>
-                    <p class="email">Email: <%= user.email%></p>
-                    <p class="delete"><%= link_to "Delete", user, method: :delete, data: { confirm: "are you sure?" },
-                                                local: true, class_name: "destroy_user"%></p>
+                    <div class="info">
+                        <p class="name">Username: <%= user.name%></p>
+                        <p class="name">id: <%= user.id%></p>
+                        <p class="email">Email: <%= user.email%></p>
+                        <p class="delete"><%= link_to "Delete", user, method: :delete, data: { confirm: "are you sure?" },
+                                                    local: true, class_name: "destroy_user"%></p>
+                    </div>
                 </div>
             </article>
         <% end %>

@@ -1,9 +1,26 @@
-<h1>this is where the work is done</h1>
-
-<% @blogs.each do |blog| %>
-    <div class="blog-info">
-        <h3>author: <%= blog.author.name %></h3>
-        <p><%= blog.title %></p>
-        <p><%= blog.body %></p>
+<header><h1 class="web-title">instant blogger</h1></header>
+<div class="options">
+        <div class="item"><div id="new-blog"><%= link_to "new blog", new_blog_path, remote: true %></div></div>
     </div>
-<% end %>
+<div class="main-features">
+    <span>
+        <h2 class="blog-title">blogs</h2>
+        <h2 class="user-title">Users</h2>
+    </span>
+    <aside class="users-container">
+        <% @users.each do |user|%>
+            <article class="item">
+                <div class="contents">
+                    <p class="name">Username: <%= user.name%></p>
+                    <p class="name">id: <%= user.id%></p>
+                    <p class="email">Email: <%= user.email%></p>
+                    <p class="delete"><%= link_to "Delete", user, method: :delete, data: { confirm: "are you sure?" },
+                                                local: true, class_name: "destroy_user"%></p>
+                </div>
+            </article>
+        <% end %>
+    </aside>
+    <div class="blogs-container">
+        <%= render @blogs %>
+    </div>
+</div>

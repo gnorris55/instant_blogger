@@ -1,0 +1,8 @@
+<article class="item">
+    <div class="contents">
+        <p class="name"><%= blog.author.name %></p>
+        <p class="title"><%= blog.title %></p>
+        <p class="body"><%= blog.body %></p>
+        <p class="delete"><%= link_to "Delete", blog, method: :delete, data: { confirm: "are you sure?" }, local: true, class_name: "destroy_blog"%></p>
+    </div>
+</article>

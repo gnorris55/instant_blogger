@@ -1,0 +1,26 @@
+<%= form_with(model: blog) do |form| %>
+    <% if blog.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(blog.errors.count, "error") %> prohibited this pony from being saved:</h2>
+
+        <ul>
+        <% blog.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="form-contents">
+    <div class="field title-label"><%= form.label :title %></div>
+    <div class="field title"><%= form.text_field :title %></div>
+
+    <div class="field body-label"><%= form.label :body %></div>
+    <div class="field body"><%= form.text_area :body %></div>
+
+    <div class="field author-label"><%= form.label "author (select)"%></div>
+    <div class="field author"><%= form.select(:author_id, options_for_select(@user_options) )%></div>
+
+        <div class="field button"><%= form.submit %></div>
+    </div>
+  <% end %>
+</div>

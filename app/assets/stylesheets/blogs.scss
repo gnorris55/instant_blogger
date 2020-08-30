@@ -1,3 +1,184 @@
 // Place all the styles related to the Blogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    margin: 0px;
+    padding: 0px;
+    .web-title {
+        text-align: center;
+        padding: 10px;
+        margin: 0px;
+        background-color: rgb(245, 245, 245);
+
+        border-bottom: rgb(246, 176, 46) solid 1px;
+        border-top: rgb(246, 176, 46) solid 1px;
+    }
+    .main-features {
+        margin-left: 20px;
+        span {
+            display: flex;
+            .blog-title {
+                text-decoration-line: underline;
+                margin-left: 20px;
+            }
+            .user-title {
+                text-decoration-line: underline;
+                margin-left: 20px;
+                margin-left: 650px;
+            }
+        }
+        .blogs-container {
+            background-color: rgb(245, 245, 245);
+            padding: 30px;
+            border: rgb(192, 192, 192) solid .5px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+            margin-right: auto;
+            width: 625px;
+            .item {
+                background-color: rgba(246, 176, 46, 0.493);
+                width: 100%;
+                border: grey solid 1px;
+                border-radius: 5px;
+                margin-bottom: 15px;
+                .contents {
+                    margin: 2px;
+                    border-radius: 5px;
+                    padding: 5px;
+                    background-color: white;
+                    border: grey solid .5px;
+                    .name {
+                        margin: 5px 5px 5px 5px;
+                        position: absolute;
+                    }
+                    .title {
+                        text-align: center;
+                        font-size: larger;
+                        margin-top: 5px;
+                        text-decoration-line: underline;
+                    }
+                    .body {
+                        text-align: left;
+                        padding: 15px;
+                        border: rgb(199, 199, 199) solid .5px;
+                        border-radius: 3px;
+                        margin: 5px;
+
+                    }
+                    .delete {
+                        margin-left: 5px;
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
+        .users-container {
+            background-color: rgb(245, 245, 245);
+            display: inline;
+            float: right;
+            width: 625px;
+            border: grey solid .5px;
+            margin-right: 20px;
+            background-color: rgb(245, 245, 245);
+            padding: 30px;
+            border: rgb(192, 192, 192) solid .5px;
+            display: flex;
+            flex-direction: column;
+            .item {
+                background-color: rgba(246, 176, 46, 0.493);
+                width: 100%;
+                border: grey solid 1px;
+                border-radius: 5px;
+                margin-bottom: 15px;
+                .contents {
+                    margin: 2px;
+                    border-radius: 5px;
+                    padding: 0px;
+                    padding-left: 10px;
+                    background-color: white;
+                    border: grey solid .5px;
+                }
+            }
+        }
+    
+    }
+    .options {
+        margin: 10px 10px 10px 10px;
+        display: flex;
+        height: auto;
+        .item {
+            text-align: center;
+            background-color: rgb(245, 245, 245);
+            padding: 10px;
+            border: grey solid .5px;
+            margin: 10px;
+            width: 350px;
+            a {
+                margin-top: 10px;
+                text-align: center;
+                vertical-align: middle;
+            }
+
+        }
+        .form-contents {
+            margin: 10px;
+            display: grid;
+            grid-template-columns: 70px 200px;
+            .field {
+                font-size: 13px;
+                text-align: left;
+                input {
+                    width: 100%;
+                    border: lightgrey solid .5px;
+                }
+            }
+            .title {
+                input {
+                    height: 15px;
+                }
+            }
+            .body {
+                margin-top: 10px;
+                height: 70px;
+                textarea {
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 12px;
+                    height: 50px;
+                    width: 100%;
+                    resize: none;
+                    border: lightgrey solid .5px;
+                }
+            }
+            .author {
+                margin-top: 0px;
+                text-align: left;
+                select {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    vertical-align: middle;
+                    height: 20px;
+                    text-align: center;
+                    width: 80px;
+                    border-radius: 0px;
+                    border: lightgrey solid .5px;
+                }
+            }
+            .button {
+                margin-top: 20px;
+                input {
+                    padding: 5px;
+                    border: none;
+                    border-radius: 3px;
+                    background-color: white;
+                    width: 100px;
+                    text-align: center;
+                }
+                input:hover {
+                    background-color: rgb(188, 235, 188);
+                }
+            }
+        }
+    }
+
+}
